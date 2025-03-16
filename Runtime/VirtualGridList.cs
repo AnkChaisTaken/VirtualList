@@ -49,7 +49,7 @@ namespace VirtualList
 
          Vector2 size = Vector2.zero;
          size[_axis] = cellSize[_axis] * primary + Mathf.Max(0, primary - 1) * spacing[_axis];
-         size[otherAxis] = cellSize[otherAxis] * limit + Mathf.Min(0, limit - 1) * spacing[otherAxis];
+         size[otherAxis] = cellSize[otherAxis] * limit + Mathf.Max(0, limit - 1) * spacing[otherAxis];
          size.x += padding.horizontal;
          size.y += padding.vertical;
          scrollRect.content.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, size.x);
